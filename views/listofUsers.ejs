@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <a href="/users/new">Add user</a>
+    <h3>Users list Page</h3>
+    <% if(users.length){ %>
+        <% users.forEach(user => { %>
+            <a href="/users/<%= user.email %>">
+                <h3 style="background: gold;
+                            display: inline;
+                            padding: 0 1rem;
+                            margin: 0 1rem;
+                "><%= user.name %></h3>
+            </a>
+        <% }) %>
+    <%} else { %>
+        <h2>No users available</h2>
+    <%}%>
+    
+</body>
+</html>
