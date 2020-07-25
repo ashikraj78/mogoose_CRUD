@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-    <h2><%= user.name %></h2>
-    <h3><%= user.email %></h3>
-    <h3><%= user.age %></h3>
-    <a href="/users/<%= user.email %>/edit">Update</a>
-    <a href="/users/<%= user.email %>/delete">Delete</a>
-    <a href="/users">Back</a>
+<body class="container">
+    <section class="userslist">
+        <h2>Name : <%= user.name %></h2>
+        <h3> Email :<%= user.email %></h3>
+        <h3>Age :<%= user.age %></h3>
+        <a class="btn"  href="/users/<%= user.email %>/edit">Update</a>
+        <a class="btn"  href="/users/<%= user.email %>/delete">Delete</a>
+        <a class="btn"  href="/users">Back</a>
+    </section>
 </body>
 </html>

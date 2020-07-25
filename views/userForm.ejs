@@ -4,13 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-  <form action="/users" method="POST">
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="email" placeholder="Email">
-    <input type="number" name="age" placeholder="Age">
-    <input type="submit" value="Add user">
+<body class="container">
+  <form class="userslist" action="/users" method="POST">
+    <div class="userlist">
+      <label for="name">Name</label>
+      <input type="text" name="name">
+    </div>
+    <div class="userlist">
+      <label for="email">Email</label>
+      <input type="email" name="email">
+    </div>
+    <div class="userlist">
+      <label for="age">Age</label>
+      <input type="number" name="age">
+    </div>
+    <input class="btn" type="submit" value="Add Mate">
   </form>
 </body>
 </html>

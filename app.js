@@ -22,6 +22,7 @@ var app = express();
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
+app.use(express.static(__dirname+"/public"))
 
 
 app.set("views", path.join(__dirname, "views")) 

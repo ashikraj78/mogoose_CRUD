@@ -4,16 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-  <form action="/users/<%= user.email %>" method="POST">
-    <label for="name">Name</label>
-    <input type="text" name="name" value="<%= user.name %>">
-    <label for="email">Email</label>
-    <input type="text" name="email" value="<%= user.email %>">
-    <label for="age">Age</label>
-    <input type="number" name="age" value="<%= user.age %>">
-    <input type="submit" value="Update">
+<body class="container">
+  <form  class="userslist"  action="/users/<%= user.email %>" method="POST">
+    <div class="userlist">
+      <label for="name">Name</label>
+      <input type="text" name="name" value="<%= user.name %>">
+    </div>
+    <div class="userlist">
+      <label for="email">Email</label>
+      <input type="text" name="email" value="<%= user.email %>">
+    </div>
+    <div class="userlist">
+      <label for="age">Age</label>
+      <input type="number" name="age" value="<%= user.age %>">
+    </div>
+    <input class="btn"  type="submit" value="Update">
   </form>
 </body>
 </html>
